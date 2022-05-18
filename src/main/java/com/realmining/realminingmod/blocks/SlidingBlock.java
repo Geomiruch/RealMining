@@ -42,7 +42,7 @@ public class SlidingBlock extends FallingDamagingBlock {
                 }
             }
 
-            if (avaliableDirections.size() > 0) {
+            if (avaliableDirections.size() > 1) {
                 Direction fallDirection = avaliableDirections.get(pRandom.nextInt(avaliableDirections.size()));
 
                 pLevel.removeBlock(pPos, false);

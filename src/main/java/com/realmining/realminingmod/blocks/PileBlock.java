@@ -1,6 +1,6 @@
 package com.realmining.realminingmod.blocks;
 
-import com.example.examplemod.entity.FallingPileBlockEntity;
+import com.realmining.realminingmod.entity.FallingPileBlockEntity;
 import net.minecraft.block.FallingBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;

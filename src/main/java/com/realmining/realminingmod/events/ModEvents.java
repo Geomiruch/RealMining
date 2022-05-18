@@ -1,9 +1,9 @@
 package com.realmining.realminingmod.events;
 
-import com.example.examplemod.realminingMod;
+import com.realmining.realminingmod.RealMiningMod;
 import com.realmining.realminingmod.blocks.ModBlocks;
-import com.example.examplemod.items.ModItems;
-import com.example.examplemod.sounds.ModSounds;
+import com.realmining.realminingmod.items.ModItems;
+import com.realmining.realminingmod.sounds.ModSounds;
 import com.realmining.realminingmod.util.ModTags;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -26,7 +26,7 @@ import net.minecraftforge.fml.common.Mod;
 import java.util.ArrayList;
 import java.util.List;
 
-@Mod.EventBusSubscriber(modid = realminingMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
+@Mod.EventBusSubscriber(modid = RealMiningMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
 public class ModEvents {
 
     public static BlockPos getDirectionToSlide(BlockPos mainPos, World world)

@@ -1,7 +1,7 @@
 package com.realmining.realminingmod.items;
 
 
-import com.example.examplemod.realminingMod;
+import com.realmining.realminingmod.RealMiningMod;
 import com.realmining.realminingmod.blocks.ModBlocks;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -11,7 +11,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class ModItems {
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, realminingMod.MOD_ID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, RealMiningMod.MOD_ID);
 
     public static final RegistryObject<Item> WOOD_GLUE = ITEMS.register("wood_glue", () -> new Item(new Item.Properties().tab(ItemGroup.TAB_MATERIALS)));
     public static final RegistryObject<Item> MORTAR = ITEMS.register("mortar", () -> new Item(new Item.Properties().tab(ItemGroup.TAB_MATERIALS)));

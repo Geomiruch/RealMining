@@ -1,6 +1,6 @@
 package com.realmining.realminingmod.blocks;
 
-import com.realmining.realminingmod.realminingMod;
+import com.realmining.realminingmod.RealMiningMod;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.WallBlock;
@@ -11,7 +11,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class ModBlocks {
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, realminingMod.MOD_ID);
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, RealMiningMod.MOD_ID);
 
     public static final RegistryObject<Block> FALLING_COBBLE = BLOCKS.register("falling_cobble", () -> new SlidingBlock(Block.Properties.of(Material.STONE).strength(3.0F, 3.0F).harvestTool(ToolType.PICKAXE)));
     public static final RegistryObject<Block> FALLING_GRANITE_COBBLE = BLOCKS.register("falling_granite_cobble", () -> new SlidingBlock(Block.Properties.of(Material.STONE).strength(3.0F, 3.0F).harvestTool(ToolType.PICKAXE)));

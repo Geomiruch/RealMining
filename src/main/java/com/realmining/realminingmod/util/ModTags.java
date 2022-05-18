@@ -1,6 +1,6 @@
 package com.realmining.realminingmod.util;
 
-import com.realmining.realminingmod.realminingMod;
+import com.realmining.realminingmod.RealMiningMod;
 import net.minecraft.block.Block;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ITag;
@@ -12,7 +12,7 @@ public class ModTags
 {
     public static class Blocks
     {
-        public static final ITag.INamedTag<Block> CAN_LANDSLIDE = BlockTags.createOptional(new ResourceLocation(realminingMod.MOD_ID, "blocks/can_landslide"));
-        public static final ITag.INamedTag<Block> CAN_TRANSFORM = BlockTags.createOptional(new ResourceLocation(realminingMod.MOD_ID, "blocks/can_transform"));
+        public static final ITag.INamedTag<Block> CAN_LANDSLIDE = BlockTags.createOptional(new ResourceLocation(RealMiningMod.MOD_ID, "blocks/can_landslide"));
+        public static final ITag.INamedTag<Block> CAN_TRANSFORM = BlockTags.createOptional(new ResourceLocation(RealMiningMod.MOD_ID, "blocks/can_transform"));
     }
 }
