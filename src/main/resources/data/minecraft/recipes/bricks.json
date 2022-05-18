@@ -10,7 +10,7 @@
       "item": "minecraft:brick"
     },
     "Y": {
-      "item": "gravity:mortar"
+      "item": "realmining:mortar"
     }
   },
   "result": {

@@ -33,7 +33,7 @@
                   "condition": "minecraft:survives_explosion"
                 }
               ],
-              "name": "gravity:andesite_cobble"
+              "name": "realmining:andesite_cobble"
             }
           ]
         }

@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "gravity:andesite_cobble_slab",
-    "gravity:diorite_cobble_slab",
-    "gravity:granite_cobble_slab"
+    "realmining:andesite_cobble_slab",
+    "realmining:diorite_cobble_slab",
+    "realmining:granite_cobble_slab"
   ]
 }
