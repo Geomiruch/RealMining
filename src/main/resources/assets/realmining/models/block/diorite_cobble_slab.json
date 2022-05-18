@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "realmining:block/diorite_cobble",
+    "top": "realmining:block/diorite_cobble",
+    "side": "realmining:block/diorite_cobble"
+  }
+}

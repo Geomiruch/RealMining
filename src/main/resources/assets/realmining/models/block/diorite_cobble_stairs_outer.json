@@ -1,0 +1,8 @@
+{
+  "parent": "block/outer_stairs",
+  "textures": {
+    "bottom": "realmining:block/diorite_cobble",
+    "top": "realmining:block/diorite_cobble",
+    "side": "realmining:block/diorite_cobble"
+  }
+}
