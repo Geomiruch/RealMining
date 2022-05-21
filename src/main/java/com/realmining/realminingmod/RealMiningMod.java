@@ -1,12 +1,16 @@
 package com.realmining.realminingmod;
 
 import com.realmining.realminingmod.blocks.ModBlocks;
+import com.realmining.realminingmod.events.ModEvents;
 import com.realmining.realminingmod.items.ModItems;
 import com.realmining.realminingmod.sounds.ModSounds;
+import com.realmining.realminingmod.world.features.StonesGen;
+import com.realmining.realminingmod.world.features.ores.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
@@ -27,11 +31,13 @@ import java.util.stream.Collectors;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class RealMiningMod
 {
+    private static RealMiningMod instance;
     // Directly reference a log4j logger.
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "realmining";
 
     public RealMiningMod() {
+        instance=this;
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         // Register the enqueueIMC method for modloading
@@ -48,8 +54,23 @@ public class RealMiningMod
         ModSounds.SOUNDS.register(bus);
         ModItems.ITEMS.register(bus);
         ModBlocks.BLOCKS.register(bus);
-    }
 
+
+        MinecraftForge.EVENT_BUS.addListener(EventPriority.LOWEST, ModEvents::biomeLoadingIntercept);
+        MinecraftForge.EVENT_BUS.addListener(EventPriority.LOWEST, StonesGen::generateOre);
+        MinecraftForge.EVENT_BUS.addListener(EventPriority.LOWEST, CoalOre::generateOre);
+        MinecraftForge.EVENT_BUS.addListener(EventPriority.LOWEST, IronOre::generateOre);
+        MinecraftForge.EVENT_BUS.addListener(EventPriority.LOWEST, GoldOre::generateOre);
+        MinecraftForge.EVENT_BUS.addListener(EventPriority.LOWEST, DiamondOre::generateOre);
+        MinecraftForge.EVENT_BUS.addListener(EventPriority.LOWEST, RedstoneOre::generateOre);
+        MinecraftForge.EVENT_BUS.addListener(EventPriority.LOWEST, LapisOre::generateOre);
+        MinecraftForge.EVENT_BUS.addListener(EventPriority.LOWEST, EmeraldOre::generateOre);
+
+
+    }
+    public static RealMiningMod getInstance() {
+        return instance;
+    }
     private void setup(final FMLCommonSetupEvent event)
     {
         // some preinit code

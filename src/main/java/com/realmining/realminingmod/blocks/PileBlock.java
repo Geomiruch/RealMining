@@ -1,10 +1,10 @@
 package com.realmining.realminingmod.blocks;
 
 import com.realmining.realminingmod.entity.FallingPileBlockEntity;
-import net.minecraft.block.FallingBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.IWaterLoggable;
 import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.player.PlayerEntity;

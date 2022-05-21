@@ -4,7 +4,6 @@ import com.realmining.realminingmod.RealMiningMod;
 import com.realmining.realminingmod.blocks.ModBlocks;
 import com.realmining.realminingmod.items.ModItems;
 import com.realmining.realminingmod.sounds.ModSounds;
-import com.realmining.realminingmod.util.ModTags;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.material.Material;
@@ -16,8 +15,11 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraft.world.gen.GenerationStage;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.common.world.BiomeGenerationSettingsBuilder;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.event.world.ExplosionEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -28,27 +30,6 @@ import java.util.List;
 
 @Mod.EventBusSubscriber(modid = RealMiningMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
 public class ModEvents {
-
-    public static BlockPos getDirectionToSlide(BlockPos mainPos, World world)
-    {
-        if(world.getBlockState(mainPos.east()).isAir() && world.getBlockState(mainPos.east().below()).isAir())
-        {
-            return mainPos.east();
-        }
-        if(world.getBlockState(mainPos.west()).isAir() && world.getBlockState(mainPos.west().below()).isAir())
-        {
-            return mainPos.west();
-        }
-        if(world.getBlockState(mainPos.north()).isAir() && world.getBlockState(mainPos.north().below()).isAir())
-        {
-            return mainPos.north();
-        }
-        if(world.getBlockState(mainPos.south()).isAir() && world.getBlockState(mainPos.south().below()).isAir())
-        {
-            return mainPos.south();
-        }
-        return mainPos;
-    }
     public static ArrayList<BlockPos> getDirections(BlockPos mainPos)
     {
         BlockPos leftPos = mainPos.east();
@@ -115,22 +96,6 @@ public class ModEvents {
                 }
             }
     }
-
-    /*@SubscribeEvent
-    public static void onBlockTransformation(BlockEvent.NeighborNotifyEvent event)
-    {
-        BlockState state = event.getState();
-        if(ModTags.Blocks.CAN_LANDSLIDE.contains(state.getBlock()))
-        {
-            World world = (World) event.getWorld();
-            BlockPos newPos = getDirectionToSlide(event.getPos(), world);
-            if(event.getPos()!=newPos)
-            {
-                world.setBlockAndUpdate(newPos, state);
-                world.setBlockAndUpdate(event.getPos(), Blocks.AIR.defaultBlockState());
-            }
-        }
-    }*/
 
     @SubscribeEvent
     public static void onBlockExplosion(ExplosionEvent.Detonate event)
@@ -266,6 +231,13 @@ public class ModEvents {
                 world.addFreshEntity(itementity);
             }
         }
-
     }
+    @SubscribeEvent
+    public static void biomeLoadingIntercept(BiomeLoadingEvent event) {
+        BiomeGenerationSettingsBuilder gen = event.getGeneration();
+        gen.getFeatures(GenerationStage.Decoration.UNDERGROUND_ORES).clear();
+    }
+
+
+
 }

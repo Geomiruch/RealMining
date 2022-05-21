@@ -2,6 +2,7 @@ package com.realmining.realminingmod.blocks;
 
 import com.realmining.realminingmod.RealMiningMod;
 import net.minecraft.block.Block;
+import net.minecraft.block.RedstoneWireBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.WallBlock;
 import net.minecraft.block.material.Material;
@@ -34,6 +35,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> SAND_PILE = BLOCKS.register("sand_pile", () -> new PileBlock(Block.Properties.of(Material.SAND).harvestTool(ToolType.SHOVEL).sound(SoundType.SAND)));
     public static final RegistryObject<Block> DIRT_PILE = BLOCKS.register("dirt_pile", () -> new PileBlock(Block.Properties.of(Material.DIRT).harvestTool(ToolType.SHOVEL).sound(SoundType.GRAVEL)));
 
-
+    public static final RegistryObject<Block> COAL_ORE_SAMPLE = BLOCKS.register("coal_ore_sample", () -> new RockBlock());
+    public static final RegistryObject<Block> IRON_ORE_SAMPLE = BLOCKS.register("iron_ore_sample", () -> new RockBlock());
+    public static final RegistryObject<Block> DIAMOND_ORE_SAMPLE = BLOCKS.register("diamond_ore_sample", () -> new RockBlock());
+    public static final RegistryObject<Block> GOLD_ORE_SAMPLE = BLOCKS.register("gold_ore_sample", () -> new RockBlock());
+    public static final RegistryObject<Block> EMERALD_ORE_SAMPLE = BLOCKS.register("emerald_ore_sample", () -> new RockBlock());
+    public static final RegistryObject<Block> REDSTONE_ORE_SAMPLE = BLOCKS.register("redstone_ore_sample", () -> new RockBlock());
+    public static final RegistryObject<Block> LAPIS_ORE_SAMPLE = BLOCKS.register("lapis_ore_sample", () -> new RockBlock());
 
 }

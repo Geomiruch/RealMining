@@ -3,6 +3,8 @@ package com.realmining.realminingmod.items;
 
 import com.realmining.realminingmod.RealMiningMod;
 import com.realmining.realminingmod.blocks.ModBlocks;
+import com.realmining.realminingmod.blocks.RockBlock;
+import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -33,6 +35,13 @@ public class ModItems {
     public static final RegistryObject<Item> SAND_PILE = ITEMS.register("sand_pile", () -> new BlockItem(ModBlocks.SAND_PILE.get(), new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
     public static final RegistryObject<Item> DIRT_PILE = ITEMS.register("dirt_pile", () -> new BlockItem(ModBlocks.DIRT_PILE.get(), new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
 
+    public static final RegistryObject<Item> COAL_ORE_SAMPLE = ITEMS.register("coal_ore_sample", () -> new BlockItem(ModBlocks.COAL_ORE_SAMPLE.get(), new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
+    public static final RegistryObject<Item> IRON_ORE_SAMPLE = ITEMS.register("iron_ore_sample", () -> new BlockItem(ModBlocks.IRON_ORE_SAMPLE.get(), new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
+    public static final RegistryObject<Item> DIAMOND_ORE_SAMPLE = ITEMS.register("diamond_ore_sample", () -> new BlockItem(ModBlocks.DIAMOND_ORE_SAMPLE.get(), new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
+    public static final RegistryObject<Item> GOLD_ORE_SAMPLE = ITEMS.register("gold_ore_sample", () -> new BlockItem(ModBlocks.GOLD_ORE_SAMPLE.get(), new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
+    public static final RegistryObject<Item> EMERALD_ORE_SAMPLE = ITEMS.register("emerald_ore_sample", () -> new BlockItem(ModBlocks.EMERALD_ORE_SAMPLE.get(), new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
+    public static final RegistryObject<Item> REDSTONE_ORE_SAMPLE = ITEMS.register("redstone_ore_sample", () -> new BlockItem(ModBlocks.REDSTONE_ORE_SAMPLE.get(), new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
+    public static final RegistryObject<Item> LAPIS_ORE_SAMPLE = ITEMS.register("lapis_ore_sample", () -> new BlockItem(ModBlocks.LAPIS_ORE_SAMPLE.get(), new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
 
 
 }

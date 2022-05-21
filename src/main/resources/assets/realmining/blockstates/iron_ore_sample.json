@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "realmining:block/iron_ore_sample"
+      }
+    ]
+  }
+}

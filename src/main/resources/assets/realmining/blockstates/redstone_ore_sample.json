@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "realmining:block/redstone_ore_sample"
+      }
+    ]
+  }
+}
