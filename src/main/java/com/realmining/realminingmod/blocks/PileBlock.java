@@ -124,7 +124,7 @@ public class PileBlock extends FallingDamagingBlock {
     public void neighborChanged(BlockState pState, World pLevel, BlockPos pPos, Block pBlock, BlockPos pFromPos, boolean pIsMoving) {
         super.neighborChanged(pState, pLevel, pPos, pBlock, pFromPos, pIsMoving);
         BlockState aboveState = pLevel.getBlockState(pPos.above());
-        if(aboveState.getBlock() instanceof PileBlock && pState.getBlock() instanceof PileBlock) {
+        if(aboveState.getBlock() == this && pState.getBlock() == this) {
             int aboveLayers = aboveState.getValue(LAYERS);
             int currentLayers = pState.getValue(LAYERS);
             if(currentLayers < 8 && aboveLayers > 0) {
@@ -139,9 +139,9 @@ public class PileBlock extends FallingDamagingBlock {
         }
     }
 
-    public static boolean canFallHere(ServerWorld pLevel, BlockPos pPos, BlockState pCurState) {
+    public boolean canFallHere(ServerWorld pLevel, BlockPos pPos, BlockState pCurState) {
         BlockState blockState = pLevel.getBlockState(pPos);
-        if(blockState.getBlock() instanceof PileBlock) {
+        if(blockState.getBlock() == this) {
             int fallLayers = blockState.getValue(LAYERS);
             int currentLayers = pCurState.getValue(LAYERS);
             return fallLayers < 8 && fallLayers + currentLayers <= 8;
@@ -149,11 +149,11 @@ public class PileBlock extends FallingDamagingBlock {
         return blockState.canBeReplaced(new DirectionalPlaceContext(pLevel, pPos, Direction.DOWN, ItemStack.EMPTY, Direction.UP));
     }
 
-    public static boolean canFallBelow(ServerWorld pLevel, BlockPos pPos, BlockState pCurState) {
+    public boolean canFallBelow(ServerWorld pLevel, BlockPos pPos, BlockState pCurState) {
         return canFallHere(pLevel, pPos.below(), pCurState);
     }
 
-    public static void updateTickSlidingPile(BlockState pState, ServerWorld pLevel, BlockPos pPos, Random pRandom) {
+    public void updateTickSlidingPile(BlockState pState, ServerWorld pLevel, BlockPos pPos, Random pRandom) {
         if (!canFallHere(pLevel, pPos.below(), pState)) {
             List<Direction> avaliableDirections = new ArrayList<>();
 
@@ -169,7 +169,7 @@ public class PileBlock extends FallingDamagingBlock {
                 pLevel.removeBlock(pPos, false);
 
                 BlockState replaceFallBlockState = pLevel.getBlockState(pPos.relative(fallDirection));
-                if(replaceFallBlockState.getBlock() instanceof PileBlock) {
+                if(replaceFallBlockState.getBlock() == this) {
                     int replaceLayers = replaceFallBlockState.getValue(LAYERS);
                     int currentLayers = pState.getValue(LAYERS);
                     pLevel.setBlockAndUpdate(pPos.relative(fallDirection), replaceFallBlockState.setValue(LAYERS, replaceLayers + currentLayers));
