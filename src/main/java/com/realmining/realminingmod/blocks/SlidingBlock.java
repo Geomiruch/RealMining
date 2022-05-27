@@ -20,7 +20,7 @@ public class SlidingBlock extends FallingDamagingBlock {
     @Override
     public void tick(BlockState pState, ServerWorld pLevel, BlockPos pPos, Random pRand) {
         super.tick(pState, pLevel, pPos, pRand);
-        pLevel.getBlockTicks().scheduleTick(pPos, this, this.getDelayAfterPlace());
+        pLevel.getBlockTicks().scheduleTick(pPos, this, this.getUpdateRate());
         updateTickSliding(pState, pLevel, pPos, pRand);
     }
 
@@ -33,17 +33,17 @@ public class SlidingBlock extends FallingDamagingBlock {
     }
 
     public static void updateTickSliding(BlockState pState, ServerWorld pLevel, BlockPos pPos, Random pRandom) {
-        if (!canFallHere(pLevel, pPos.below())) {
-            List<Direction> avaliableDirections = new ArrayList<>();
+        if (!canFallBelow(pLevel, pPos)) {
+            List<Direction> availableDirections = new ArrayList<>();
 
             for(Direction dir : Direction.Plane.HORIZONTAL) {
                 if(canFallHere(pLevel, pPos.relative(dir)) && canFallBelow(pLevel, pPos.relative(dir))) {
-                    avaliableDirections.add(dir);
+                    availableDirections.add(dir);
                 }
             }
 
-            if (avaliableDirections.size() > 1) {
-                Direction fallDirection = avaliableDirections.get(pRandom.nextInt(avaliableDirections.size()));
+            if (availableDirections.size() > 1) {
+                Direction fallDirection = availableDirections.get(pRandom.nextInt(availableDirections.size()));
 
                 pLevel.removeBlock(pPos, false);
 
