@@ -1,11 +1,9 @@
 package com.realmining.realminingmod.blocks;
 
 import com.realmining.realminingmod.RealMiningMod;
-import net.minecraft.block.Block;
-import net.minecraft.block.RedstoneWireBlock;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.WallBlock;
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -42,5 +40,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> EMERALD_ORE_SAMPLE = BLOCKS.register("emerald_ore_sample", () -> new RockBlock());
     public static final RegistryObject<Block> REDSTONE_ORE_SAMPLE = BLOCKS.register("redstone_ore_sample", () -> new RockBlock());
     public static final RegistryObject<Block> LAPIS_ORE_SAMPLE = BLOCKS.register("lapis_ore_sample", () -> new RockBlock());
+
+    public static final RegistryObject<Block> SIMPLE_GRAVEL = BLOCKS.register("simple_gravel", () -> new SimpleGravelBlock(AbstractBlock.Properties.of(Material.SAND, MaterialColor.STONE).harvestTool(ToolType.SHOVEL).strength(0.6F).sound(SoundType.GRAVEL)));
 
 }
