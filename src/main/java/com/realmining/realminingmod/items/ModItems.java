@@ -43,5 +43,5 @@ public class ModItems {
     public static final RegistryObject<Item> REDSTONE_ORE_SAMPLE = ITEMS.register("redstone_ore_sample", () -> new BlockItem(ModBlocks.REDSTONE_ORE_SAMPLE.get(), new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
     public static final RegistryObject<Item> LAPIS_ORE_SAMPLE = ITEMS.register("lapis_ore_sample", () -> new BlockItem(ModBlocks.LAPIS_ORE_SAMPLE.get(), new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
 
-
+    public static final RegistryObject<Item> SIMPLE_GRAVEL = ITEMS.register("simple_gravel", () -> new BlockItem(ModBlocks.SIMPLE_GRAVEL.get(), new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
 }

@@ -29,7 +29,7 @@ import net.minecraftforge.common.util.Lazy;
 import javax.annotation.Nullable;
 import java.util.Random;
 
-public abstract class DecorativeBlock extends FallingBlock implements IWaterLoggable
+public abstract class DecorativeBlock extends FallingCustomBlock implements IWaterLoggable
 {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
