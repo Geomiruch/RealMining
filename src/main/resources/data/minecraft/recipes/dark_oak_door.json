@@ -11,7 +11,7 @@
       "item": "realmining:dark_oak_plank"
     },
     "X": {
-      "item": "realmining:wood_glue"
+      "tag": "realmining:wood_connectors"
     }
   },
   "result": {

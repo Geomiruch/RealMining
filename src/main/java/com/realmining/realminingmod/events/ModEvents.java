@@ -207,7 +207,7 @@ public class ModEvents {
         BlockPos blockPos = event.getPos();
         World world = event.getWorld();
 
-        if(player.getItemInHand(Hand.MAIN_HAND).getItem()==ModItems.MORTAR.get())
+        if(player.getItemInHand(Hand.MAIN_HAND).getItem()==ModItems.MORTAR.get() || player.getItemInHand(Hand.MAIN_HAND).getItem()==ModItems.NAILS.get())
         {
             ItemStack stack = player.getItemInHand(Hand.MAIN_HAND).getStack();
             if(world.getBlockState(blockPos).getBlock()==ModBlocks.FALLING_COBBLE.get().getBlock())

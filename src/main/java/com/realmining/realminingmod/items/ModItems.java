@@ -14,6 +14,8 @@ public class ModItems {
 
     public static final RegistryObject<Item> WOOD_GLUE = ITEMS.register("wood_glue", () -> new Item(new Item.Properties().tab(ModItemGroups.REALMINING_ITEMS)));
     public static final RegistryObject<Item> MORTAR = ITEMS.register("mortar", () -> new Item(new Item.Properties().tab(ModItemGroups.REALMINING_ITEMS)));
+    public static final RegistryObject<Item> NAILS = ITEMS.register("nails", () -> new Item(new Item.Properties().tab(ModItemGroups.REALMINING_ITEMS)));
+
 
     public static final RegistryObject<Item> GRANITE_COBBLE = ITEMS.register("granite_cobble", () -> new BlockItem(ModBlocks.GRANITE_COBBLE.get(), new Item.Properties().tab(ModItemGroups.REALMINING_BUILDING_BLOCKS)));
     public static final RegistryObject<Item> DIORITE_COBBLE = ITEMS.register("diorite_cobble", () -> new BlockItem(ModBlocks.DIORITE_COBBLE.get(), new Item.Properties().tab(ModItemGroups.REALMINING_BUILDING_BLOCKS)));
@@ -50,5 +52,6 @@ public class ModItems {
 
     public static final RegistryObject<Item> FLINT_AXE_HEAD = ITEMS.register("flint_axe_head", () -> new Item(new Item.Properties().tab(ModItemGroups.REALMINING_ITEMS)));
     public static final RegistryObject<Item> FLINT_PICKAXE_HEAD = ITEMS.register("flint_pickaxe_head", () -> new Item(new Item.Properties().tab(ModItemGroups.REALMINING_ITEMS)));
+
 
 }

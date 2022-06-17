@@ -10,7 +10,7 @@
       "tag": "realmining:planks"
     },
     "X": {
-      "item": "realmining:wood_glue"
+      "tag": "realmining:wood_connectors"
     }
   },
   "result": {

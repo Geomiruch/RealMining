@@ -9,7 +9,7 @@
       "item": "realmining:oak_plank"
     },
     "Y": {
-      "item": "realmining:wood_glue"
+      "tag": "realmining:wood_connectors"
     }
   },
   "result": {

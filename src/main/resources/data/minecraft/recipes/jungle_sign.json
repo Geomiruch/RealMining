@@ -14,7 +14,7 @@
       "item": "minecraft:stick"
     },
     "Y": {
-      "item": "realmining:wood_glue"
+      "tag": "realmining:wood_connectors"
     }
   },
   "result": {

@@ -10,7 +10,7 @@
       "item": "realmining:oak_plank"
     },
     "X": {
-      "item": "realmining:wood_glue"
+      "tag": "realmining:wood_connectors"
     },
     "Y": {
       "item": "minecraft:stick"
