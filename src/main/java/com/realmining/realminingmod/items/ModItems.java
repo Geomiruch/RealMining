@@ -53,5 +53,7 @@ public class ModItems {
     public static final RegistryObject<Item> FLINT_AXE_HEAD = ITEMS.register("flint_axe_head", () -> new Item(new Item.Properties().tab(ModItemGroups.REALMINING_ITEMS)));
     public static final RegistryObject<Item> FLINT_PICKAXE_HEAD = ITEMS.register("flint_pickaxe_head", () -> new Item(new Item.Properties().tab(ModItemGroups.REALMINING_ITEMS)));
 
+    public static final RegistryObject<Item> MUD = ITEMS.register("mud", () -> new BlockItem(ModBlocks.MUD.get(), new Item.Properties().tab(ModItemGroups.REALMINING_BUILDING_BLOCKS)));
+    public static final RegistryObject<Item> MUD_CLUMP = ITEMS.register("mud_clump", () -> new SnowballItem(new Item.Properties().stacksTo(16).tab(ModItemGroups.REALMINING_ITEMS)));
 
 }

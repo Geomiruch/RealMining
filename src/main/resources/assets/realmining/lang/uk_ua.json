@@ -39,5 +39,8 @@
   "item.realmining.warped_plank": "Дошка з химерного дерева",
   "item.realmining.flint_axe_head": "Головка кремнієвої сокири",
   "item.realmining.flint_pickaxe_head": "Головка кремнієвого кайла",
-  "item.realmining.nails": "Цвяхи"
+  "item.realmining.nails": "Цвяхи",
+  "item.realmining.mud": "Грязюка",
+  "item.realmining.mud_clump": "Жменя грязюки"
+
 }

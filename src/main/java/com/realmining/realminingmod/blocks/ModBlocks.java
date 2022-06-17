@@ -42,6 +42,6 @@ public class ModBlocks {
     public static final RegistryObject<Block> CRIMSON_WORKING_STUB = BLOCKS.register("crimson_working_stub", () -> new CraftingTableBlock(AbstractBlock.Properties.of(Material.WOOD).strength(2.5F).sound(SoundType.WOOD)));
     public static final RegistryObject<Block> WARPED_WORKING_STUB = BLOCKS.register("warped_working_stub", () -> new CraftingTableBlock(AbstractBlock.Properties.of(Material.WOOD).strength(2.5F).sound(SoundType.WOOD)));
 
-
+    public static final RegistryObject<Block> MUD = BLOCKS.register("mud", () -> new Block(Block.Properties.of(Material.DIRT).strength(0.6F).harvestTool(ToolType.SHOVEL).sound(SoundType.GRAVEL)));
 
 }

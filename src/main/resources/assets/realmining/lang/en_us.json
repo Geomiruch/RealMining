@@ -42,6 +42,8 @@
   "itemGroup.realmining_tools": "RealMining Tools",
   "item.realmining.flint_axe_head": "Flint axe head",
   "item.realmining.flint_pickaxe_head": "Flint pickaxe head",
-  "item.realmining.nails": "Nails"
+  "item.realmining.nails": "Nails",
+  "item.realmining.mud": "Mud",
+  "item.realmining.mud_clump": "Mud clump"
 
 }
