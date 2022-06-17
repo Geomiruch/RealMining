@@ -1,0 +1,15 @@
+{
+  "type": "realmining:damage_tools",
+  "ingredients": [
+    {
+      "tag": "minecraft:acacia_logs"
+    },
+    {
+      "tag": "realmining:axes"
+    }
+  ],
+  "result": {
+    "item": "realmining:acacia_plank",
+    "count": 8
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "realmining:sand_pile"
+  },
+  "result": "minecraft:glass_pane",
+  "experience": 0.35,
+  "cookingtime": 200
+}

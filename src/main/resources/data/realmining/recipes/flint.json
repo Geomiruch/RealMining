@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "realmining:gravel_pile"
+    }
+  ],
+  "result": {
+    "item": "minecraft:flint"
+  }
+}

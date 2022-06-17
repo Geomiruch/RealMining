@@ -1,0 +1,15 @@
+{
+  "type": "realmining:damage_tools",
+  "ingredients": [
+    {
+      "tag": "realmining:axes"
+    },
+    {
+      "tag": "minecraft:birch_logs"
+    }
+  ],
+  "result": {
+    "item": "realmining:birch_plank",
+    "count": 8
+  }
+}

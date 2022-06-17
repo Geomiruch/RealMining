@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "realmining:andesite_cobble_slab",
+    "realmining:diorite_cobble_slab",
+    "realmining:granite_cobble_slab"
+  ]
+}

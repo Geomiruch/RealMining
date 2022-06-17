@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "boat",
+  "pattern": [
+    "#X#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "realmining:spruce_plank"
+    },
+    "X": {
+      "item": "realmining:wood_glue"
+    }
+  },
+  "result": {
+    "item": "minecraft:spruce_boat"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "tag": "realmining:planks"
+    },
+    "X": {
+      "item": "realmining:wood_glue"
+    }
+  },
+  "result": {
+    "item": "minecraft:chest"
+  }
+}

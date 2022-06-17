@@ -1,0 +1,15 @@
+{
+  "type": "realmining:damage_tools",
+  "ingredients": [
+    {
+      "tag": "realmining:axes"
+    },
+    {
+      "tag": "minecraft:spruce_logs"
+    }
+  ],
+  "result": {
+    "item": "realmining:spruce_plank",
+    "count": 8
+  }
+}

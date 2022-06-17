@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "minecraft:block/crimson_stem",
+    "north": "minecraft:block/crimson_stem",
+    "south": "minecraft:block/crimson_stem",
+    "east": "minecraft:block/crimson_stem",
+    "west": "minecraft:block/crimson_stem",
+    "up": "minecraft:block/crimson_stem_top",
+    "down": "minecraft:block/crimson_stem_top"
+  }
+}

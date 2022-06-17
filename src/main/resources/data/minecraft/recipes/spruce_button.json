@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_button",
+  "ingredients": [
+    {
+      "item": "realmining:spruce_plank"
+    }
+  ],
+  "result": {
+    "item": "minecraft:spruce_button",
+    "count": 4
+  }
+}

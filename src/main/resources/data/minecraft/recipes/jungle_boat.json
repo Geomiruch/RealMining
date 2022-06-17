@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "boat",
+  "pattern": [
+    "#X#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "realmining:jungle_plank"
+    },
+    "X": {
+      "item": "realmining:wood_glue"
+    }
+  },
+  "result": {
+    "item": "minecraft:jungle_boat"
+  }
+}

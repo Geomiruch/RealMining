@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "realmining:gravel_pile"
+    },
+    {
+      "item": "realmining:gravel_pile"
+    },
+    {
+      "item": "realmining:gravel_pile"
+    },
+    {
+      "item": "realmining:gravel_pile"
+    },
+    {
+      "item": "realmining:gravel_pile"
+    },
+    {
+      "item": "realmining:gravel_pile"
+    },
+    {
+      "item": "realmining:gravel_pile"
+    },
+    {
+      "item": "realmining:gravel_pile"
+    }
+  ],
+  "result": {
+    "item": "minecraft:gravel"
+  }
+}

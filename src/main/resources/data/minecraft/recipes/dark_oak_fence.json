@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_fence",
+  "pattern": [
+    "#Y#",
+    "#X#"
+  ],
+  "key": {
+    "#": {
+      "item": "realmining:dark_oak_plank"
+    },
+    "X": {
+      "item": "realmining:wood_glue"
+    },
+    "Y": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "minecraft:dark_fence"
+  }
+}

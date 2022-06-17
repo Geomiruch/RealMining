@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XYX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "realmining:granite_pebble"
+    },
+    "Y": {
+      "item": "realmining:mortar"
+    }
+  },
+  "result": {
+    "item": "realmining:granite_cobble",
+    "count": 1
+  }
+}

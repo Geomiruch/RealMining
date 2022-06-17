@@ -1,0 +1,15 @@
+{
+  "type": "realmining:damage_tools",
+  "ingredients": [
+    {
+      "tag": "realmining:planks"
+    },
+    {
+      "tag": "realmining:axes"
+    }
+  ],
+  "result": {
+    "item": "minecraft:stick",
+    "count": 2
+  }
+}

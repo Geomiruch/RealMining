@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_fence_gate",
+  "pattern": [
+    "###",
+    "#X#"
+  ],
+  "key": {
+    "#": {
+      "item": "realmining:warped_plank"
+    },
+    "X": {
+      "item": "realmining:wood_glue"
+    }
+  },
+  "result": {
+    "item": "minecraft:warped_fence_gate"
+  }
+}
