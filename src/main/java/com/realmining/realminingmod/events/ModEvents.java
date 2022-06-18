@@ -10,15 +10,14 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.TieredItem;
+import net.minecraft.item.*;
 import net.minecraft.util.Hand;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.ToolType;
+import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.event.world.ExplosionEvent;
@@ -274,6 +273,20 @@ public class ModEvents {
                     }
                 }
             }
+        }
+    }
+
+    @SubscribeEvent
+    public static void onBreakingWithoutTools(PlayerEvent.BreakSpeed event) {
+        PlayerEntity player = event.getPlayer();
+        BlockState blockState = event.getState();
+        if(!(player.getItemInHand(Hand.MAIN_HAND).getItem() instanceof AxeItem) && (blockState.getMaterial()==Material.WOOD || blockState.getMaterial()==Material.NETHER_WOOD))
+        {
+            event.setCanceled(true);
+        }
+        if(!(player.getItemInHand(Hand.MAIN_HAND).getItem() instanceof PickaxeItem) && blockState.getMaterial()==Material.STONE)
+        {
+            event.setCanceled(true);
         }
     }
 }
